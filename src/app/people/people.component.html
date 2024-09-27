@@ -1,0 +1,13 @@
+<h1>People</h1>
+
+<mat-button-toggle-group [formControl]="peopleIdControl" aria-label="People">
+  <mat-button-toggle [value]="1">1</mat-button-toggle>
+  <mat-button-toggle [value]="2">2</mat-button-toggle>
+  <mat-button-toggle [value]="3">3</mat-button-toggle>
+</mat-button-toggle-group>
+
+@if (selectedPeople() !== undefined) {
+<div style="margin-top: 20px">
+  {{ selectedPeople()!.name }}
+</div>
+}
